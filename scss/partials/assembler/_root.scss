@@ -1,0 +1,13 @@
+@use '../tools/' as *;
+
+// --------------------
+/*   --- root css --- */
+// --------------------
+
+:root {
+    --font-size: #{$font-size-100};
+    --H1: #{$H1--PC};
+    --H2: #{$H2--PC};
+    --par: #{$par--PC};
+    --container: #{$cont__width--PC};
+}

@@ -1,0 +1,57 @@
+@use '../partials/tools' as *;
+@use '../partials/assembler/' as *;
+
+// --------------------
+/* --- home main --- */
+// --------------------
+
+.home {
+    font-optical-sizing: auto;
+    background-color: $clr-bg-body;
+    font-family: $font-family-systemUI;
+}
+
+.container {
+    @include container(var(--container));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.who {
+    @extend %autoMargin;
+    background-color: $clr11;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2em;
+}
+
+.testing {
+    @include container(var(--container));
+    .top {
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+        font-weight: 600;
+        gap: 2em;
+
+        & > * {
+            cursor: pointer;
+            padding: 1em;
+            background-color: rgb(137, 240, 128);
+            border-radius: 5px;
+            &:hover {
+                background-color: lightcoral;
+            }
+        }
+    }
+    .result {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 3rem;
+        color: white;
+        font-weight: 800;
+    }
+}
