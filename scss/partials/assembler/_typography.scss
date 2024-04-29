@@ -206,27 +206,65 @@
 //     font-weight: 700;
 // }
 // WorkSans - 700
+// @font-face {
+//     font-family: 'Work Sans';
+//     src: url(../assets/webfonts/Font-face/WorkSans-Bold.woff2) format('woff2'),
+//         url(../assets/webfonts/Font-face/WorkSans-Bold.ttf) format('truetype');
+//     font-weight: 700;
+// }
+// WorkSans - 600
+// @font-face {
+//     font-family: 'Work Sans';
+//     src: url(../assets/webfonts/Font-face/WorkSans-SemiBold.woff2)
+//             format('woff2'),
+//         url(../assets/webfonts/Font-face/WorkSans-SemiBold.ttf)
+//             format('truetype');
+//     font-weight: 600;
+// }
+// WorkSans - 400
+// @font-face {
+//     font-family: 'Work Sans';
+//     src: url(../assets/webfonts/Font-face/WorkSans-Regular.woff2)
+//             format('woff2'),
+//         url(../assets/webfonts/Font-face/WorkSans-Regular.ttf)
+//             format('truetype');
+//     font-weight: 400;
+// }
+
+// roboto - 400 - regular
 @font-face {
-    font-family: 'Work Sans';
-    src: url(../assets/webfonts/Font-face/WorkSans-Bold.woff2) format('woff2'),
-        url(../assets/webfonts/Font-face/WorkSans-Bold.ttf) format('truetype');
+    font-family: 'Roboto';
+    src: url(../assets/webfonts/Font-face/Roboto-Regular.woff2) format('woff2'),
+        url(../assets/webfonts/Font-face/Roboto-Regular.ttf) format('truetype');
+    font-weight: 400;
+}
+// roboto - 300 - light
+@font-face {
+    font-family: 'Roboto';
+    src: url(../assets/webfonts/Font-face/Roboto-Light.woff2) format('woff2'),
+        url(../assets/webfonts/Font-face/Roboto-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+// roboto slab - 300 - light
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(../assets/webfonts/Font-face/RobotoSlab-Light.woff2)
+            format('woff2'),
+        url(../assets/webfonts/Font-face/RobotoSlab-Light.ttf)
+            format('truetype');
+    font-weight: 300;
+}
+// roboto slab - 700 - bold
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(../assets/webfonts/Font-face/RobotoSlab-Bold.woff2) format('woff2'),
+        url(../assets/webfonts/Font-face/RobotoSlab-Bold.ttf) format('truetype');
     font-weight: 700;
 }
-// WorkSans - 600
+// Commissioner- 700 - bold
 @font-face {
-    font-family: 'Work Sans';
-    src: url(../assets/webfonts/Font-face/WorkSans-SemiBold.woff2)
-            format('woff2'),
-        url(../assets/webfonts/Font-face/WorkSans-SemiBold.ttf)
-            format('truetype');
-    font-weight: 600;
-}
-// WorkSans - 400
-@font-face {
-    font-family: 'Work Sans';
-    src: url(../assets/webfonts/Font-face/WorkSans-Regular.woff2)
-            format('woff2'),
-        url(../assets/webfonts/Font-face/WorkSans-Regular.ttf)
-            format('truetype');
-    font-weight: 400;
+    font-family: 'Commissioner';
+    src: url(../assets/webfonts/Font-face/Commissioner-Bold.woff2) format('woff2'),
+        url(../assets/webfonts/Font-face/Commissioner-Bold.ttf) format('truetype');
+    font-weight: 700;
 }

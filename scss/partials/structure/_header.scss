@@ -3,45 +3,242 @@
 /*  --- header --- */
 // ------------------
 
-header {
-    background-color: $clr-bg-header;
-   
-}
-.nav {
-    @include container(var(--container));
-    position: sticky;
-    display: flex;
-    gap: em(16, 16);
-    & > * {
-        a {
-            display: inline-block;
-            font-size: 1.25rem;
-            @extend %weight-600;
-            line-height: 1.5em;
-            color: $clr20;
-            padding-inline: 0.5em;
-            border: solid 1px transparent;
-            border-radius: 5px;
-            transition: ease-in-out 0.2s border,
-                ease-in-out 0.2s background-color;
+.header {
+    background-color: var(--clr-header);
+    font-family: $font-family-Roboto;
+    user-select: none;
 
+    .top__header {
+        transition: transform 0.2s ease-in-out;
+    }
+    .top__container {
+        max-width: var(--container);
+        margin-inline: auto;
+        position: relative;
+    }
+
+    .save__changes--btn,
+    .top__header__right,
+    .top__header__file,
+    .top__header,
+    .menu__icon,
+    .menu {
+        display: flex;
+        align-items: center;
+    }
+    .menu {
+        &__icon {
+            width: em(72, 16);
+            aspect-ratio: 1/1;
+            background-color: $clr14;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.2s ease-in-out background-color;
             &:hover,
             &:focus {
-                border-bottom: 1px solid black;
-                border-top: 1px solid black;
-                background-color: $clr17;
+                background-color: $clr19;
+                img {
+                    background-color: $clr19;
+                }
+            }
+
+            img {
+                transition: 0.2s ease-in-out background-color;
+                background-color: $clr14;
+            }
+        }
+
+        h1 {
+            font: {
+                family: $font-family-Commissioner;
+                size: var(--H1); //15
+                weight: 700;
+            }
+            line-height: em(18, 15);
+            letter-spacing: em(5, 15);
+            color: var(--clr-header-H1);
+            text-transform: uppercase;
+            padding-inline: em(24, 15);
+            padding-block: em(11, 15);
+            border-right: 1px solid $clr21;
+        }
+    }
+    .top__header__file {
+        .icon__file {
+            padding-inline: em(24, 16) em(16, 16);
+
+            img {
+                width: em(14, 16);
+                height: em(16, 16);
+                background-color: var(--clr-header);
+            }
+        }
+
+        h6 {
+            font: {
+                size: var(--H6); //13
+                weight: 300;
+            }
+            line-height: em(15, 13);
+            color: $clr__header--H6;
+        }
+
+        h5 {
+            margin-top: em(5, 15);
+            font: {
+                size: var(--H5); //15
+                weight: 400;
+            }
+            line-height: em(18, 15);
+            color: $clr__header--H5;
+        }
+    }
+
+    .top__header__right {
+        margin-left: auto;
+
+        .bin {
+            width: em(18, 16);
+            height: em(20, 16);
+            margin-right: em(24, 16);
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.2);
+                svg path {
+                    fill: $clr19;
+                }
+            }
+        }
+
+        .save__changes--btn {
+            padding-inline: em(17, 16);
+            padding-block: em(10, 16);
+            border-radius: em(4, 16);
+            margin-right: em(16, 16);
+            background-color: $clr__btn;
+            transition: background-color 0.2s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                background-color: $clr__btn--hover;
+                img {
+                    background-color: $clr__btn--hover;
+                }
+            }
+
+            img {
+                transition: background-color 0.2s ease-in-out;
+                background-color: $clr__btn;
+                width: em(16, 16);
+                height: em(16, 16);
+                margin-right: em(8, 16);
+            }
+
+            h5 {
+                font: {
+                    size: var(--H5); //15
+                    weight: 400;
+                }
+                line-height: em(18, 15);
+                color: $clr__header--H5;
             }
         }
     }
-    &__1 {
-        flex-grow: 1;
+}
+.left__panel {
+    position: absolute;
+    max-width: em(250, 16);
+    background-color: $clr12;
+    height: 100svh;
+    padding: em(24, 16);
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        font-size: var(--H2); //14
+        line-height: em(16, 14);
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: $clr16;
     }
-    &__2 {
+
+    #new__document {
+        margin-top: em(30, 16);
+        text-align: center;
+        border-radius: em(4, 16);
+        padding-block: em(10, 16);
+        background-color: $clr19;
+        cursor: pointer;
+        transition: 0.2s ease-in-out background-color;
+
+        &:focus,
+        &:hover {
+            background-color: $clr20;
+        }
+        h5 {
+            color: $clr10;
+        }
     }
-    &__3 {
+
+    h5 {
+        font-size: var(--H5); //15
+        line-height: em(18, 15);
+        font-weight: 400;
+        color: $clr10;
+        margin-bottom: em(3, 15);
+        cursor: pointer;
+        &:hover {
+            color: $clr19;
+        }
     }
-    &__4 {
+
+    h6 {
+        font-size: var(--H6); //13
+        font-weight: 300;
+        line-height: em(15, 13);
+        color: $clr16;
     }
-    &__5 {
+
+    #document__list li {
+        display: flex;
+        align-items: center;
+        gap: em(16, 16);
+        margin-block: em(24, 16);
     }
+
+    #theme {
+        margin-top: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: em(24, 16);
+        .theme__switcher {
+            position: relative;
+            width: em(48, 16);
+            height: em(24, 16);
+            border-radius: em(15, 16);
+            background-color: $clr15;
+            margin-inline: em(12, 16);
+            cursor: pointer;
+            &::after {
+                position: absolute;
+                content: '';
+                width: em(12, 16);
+                aspect-ratio: 1/1;
+                background-color: $clr10;
+                border-radius: 50%;
+                top: em(5, 16);
+                right: em(5, 16);
+            }
+        }
+        .sun--light {
+            path {
+                fill: $clr10;
+            }
+        }
+    }
+}
+.close {
+    display: none;
 }
